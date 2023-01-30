@@ -19,4 +19,8 @@ It implements functionality using
 - usecases -> Actions whih user can trigger
 - domain -> contains the business logic
 - data -> Abstract Details of datasource
-- framework -> 
+- framework -> Implementations of Platform Specific Business Logic
+
+### RoadMap Day Log
+- 1 November -> Write Mock UI for Adding and Removing Tasks without animations
+- 

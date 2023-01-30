@@ -17,7 +17,7 @@ sealed class StateFullResult<T> {
 
 inline fun <T> flowResult(crossinline block: () -> StateFullResult<T>): Flow<StateFullResult<T>> {
     return flow {
-//        emit(StateFullResult.loading<T>())
+        emit(StateFullResult.loading<T>())
         try {
             emit(block())
         } catch (ex: Exception) {

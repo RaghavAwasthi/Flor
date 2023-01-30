@@ -13,9 +13,15 @@ object Dependencies {
 
 
     //Room Database
+    const val roomKtx:String= "androidx.room:room-ktx:${Versions.room}"
     const val room:String = "androidx.room:room-runtime:${Versions.room}"
     const val roomCompiler:String = "androidx.room:room-compiler:${Versions.room}"
 
+    //Depencency Injection
+    const val koinAndroid:String= "io.insert-koin:koin-android:${Versions.koin}"
+    const val koinCore:String= "io.insert-koin:koin-core:${Versions.koin}"
 
+    // Lifeycle
+    const val lifecyleRuntimeKtx= "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecyle_version}"
 
 }

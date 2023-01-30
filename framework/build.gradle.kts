@@ -1,4 +1,4 @@
-import dependencies.*
+import dependencies.Dependencies
 
 
 plugins {
@@ -37,10 +37,11 @@ android {
 }
 
 dependencies {
-
+    implementation(Dependencies.koinAndroid)
     implementation(Dependencies.room)
-    implementation(Dependencies.roomCompiler)
-  kapt(Dependencies.roomCompiler)
+    implementation(Dependencies.roomKtx)
+    annotationProcessor(Dependencies.roomCompiler)
+    kapt(Dependencies.roomCompiler)
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.5.1")
     implementation("com.google.android.material:material:1.6.1")

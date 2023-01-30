@@ -22,8 +22,5 @@ interface TaskDao {
     @Update
     fun updateTask(task: TaskEntity)
 
-//    @Query("SElECT * FROM tasks WHERE id == :taskId")
-//    fun getTasksById(taskId: String)
-
 
 }

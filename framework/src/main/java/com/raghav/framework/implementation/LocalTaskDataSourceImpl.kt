@@ -1,6 +1,7 @@
 package com.raghav.framework.implementation
 
 import com.raghav.common.StateFullResult
+import com.raghav.common.autoResult
 import com.raghav.common.flowResult
 import com.raghav.data.datasource.TaskDataSource
 import com.raghav.data.models.TaskModel
@@ -26,22 +27,22 @@ class LocalTaskDataSourceImpl(val taskDao: TaskDao) : TaskDataSource {
     }
 
 
-    override fun addTask(task: TaskModel): Flow<StateFullResult<Any>> {
-        return flowResult {
+    override fun addTask(task: TaskModel): StateFullResult<Any> {
+        return autoResult {
             taskDao.addTask(task.toEntity())
             StateFullResult.success(Any())
         }
     }
 
-    override fun updateTask(task: TaskModel): Flow<StateFullResult<Any>> {
-        return flowResult {
+    override fun updateTask(task: TaskModel): StateFullResult<Any> {
+        return autoResult {
             taskDao.updateTask(task.toEntity())
             StateFullResult.success(Any())
         }
     }
 
-    override fun deleteTask(taskID: String): Flow<StateFullResult<Any>> {
-        return flowResult {
+    override fun deleteTask(taskID: String): StateFullResult<Any> {
+        return autoResult {
             taskDao.deleteTask(taskDao.getTasksById(taskID))
             StateFullResult.success(Any())
         }

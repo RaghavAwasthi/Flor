@@ -14,15 +14,15 @@ class TaskRepositoryImpl(
         return localTaskDataSource.getTasksByStatus(statusCode)
     }
 
-    override fun addTask(task: TaskModel): Flow<StateFullResult<Any>> {
+    override fun addTask(task: TaskModel): StateFullResult<Any> {
         return localTaskDataSource.addTask(task)
     }
 
-    override fun updateTask(task: TaskModel): Flow<StateFullResult<Any>> {
+    override fun updateTask(task: TaskModel): StateFullResult<Any> {
      return localTaskDataSource.updateTask(task)
     }
 
-    override fun deleteTask(taskID: String): Flow<StateFullResult<Any>> {
+    override fun deleteTask(taskID: String): StateFullResult<Any> {
     return localTaskDataSource.deleteTask(taskID)
     }
 }

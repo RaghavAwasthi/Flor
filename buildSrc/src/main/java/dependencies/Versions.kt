@@ -20,5 +20,7 @@ object Versions {
     // Dependency Injection
     const val koin="3.2.2"
 
+    // Lifecycle Dependencies
+    const  val lifecyle_version="2.4.1"
 
 }
