@@ -8,7 +8,6 @@
     <EditText
         android:id="@+id/et_title"
         android:layout_width="0dp"
-        app:layout_constraintWidth_percent="0.4"
         android:layout_height="wrap_content"
         android:layout_marginEnd="150dp"
         android:background="@android:color/transparent"
@@ -21,7 +20,8 @@
         app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.4" />
 
 
     <EditText
@@ -44,18 +44,28 @@
 
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/tv_priority"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/montserrat"
         android:text="Priority"
         android:textColor="#7E72D1"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@+id/iv_bookmark"
+        app:layout_constraintTop_toBottomOf="@id/et_description" />
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_bookmark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/ic_bookmark"
+        app:layout_constraintBottom_toBottomOf="@id/tv_priority"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@id/tv_priority" />
 
-        android:src="@drawable/ic_bookmark"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineEnd"

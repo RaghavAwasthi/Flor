@@ -1,22 +1,23 @@
-import dependencies.*
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("maven-publish")
 }
-
 // Library Configuration
- val pomVersion = "0.0.1-SNAPSHOT"
- val groupID = "com.raghav.common"
- val artifactID = "common-utils"
- val releaseArtifact="release"
+val pomVersion = "0.0.1-SNAPSHOT"
+val groupID = "com.raghav.common"
+val artifactID = "uiComponents"
+val releaseArtifact="release"
 
 android {
+    namespace = "com.raghav.components"
     compileSdk = 32
 
     defaultConfig {
         minSdk = 21
         targetSdk = 32
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 
@@ -36,12 +37,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    viewBinding{
-        isEnabled = true
-    }
-    packagingOptions {
-        resources.excludes -= "/META-INF/*.kotlin_module"
-    }
 }
 
 afterEvaluate {
@@ -60,8 +55,11 @@ afterEvaluate {
 }
 
 dependencies {
-    api(Dependencies.koinCore)
-    api(Dependencies.kotlin_coroutines)
-    implementation(Dependencies.appcompat)
-    testImplementation(TestDependencies.junit)
+
+    implementation("androidx.core:core-ktx:1.7.0")
+    implementation("androidx.appcompat:appcompat:1.6.0")
+    implementation("com.google.android.material:material:1.8.0")
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }

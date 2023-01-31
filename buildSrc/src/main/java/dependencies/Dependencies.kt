@@ -24,4 +24,14 @@ object Dependencies {
     // Lifeycle
     const val lifecyleRuntimeKtx= "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecyle_version}"
 
+    const val gson = "com.google.code.gson:gson:${Versions.gson}"
+    const val newRelic= "com.newrelic.agent.android:android-agent:${Versions.newrelic}"
+    const val kotlinStdLib= "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinStdLib}"
+    const val workRuntimeKtx= "androidx.work:work-runtime-ktx:${Versions.workManager}"
+    const val tfliteSupport="org.tensorflow:tensorflow-lite-support:${Versions.tfliteSupport}"
+    const val tfliteMetaData="org.tensorflow:tensorflow-lite-metadata:${Versions.tfliteMetaData}"
+    const val tflite="org.tensorflow:tensorflow-lite:${Versions.tflite}"
+    const val zeroTurnAroundZip= "org.zeroturnaround:zt-zip:${Versions.zeroTurnAroundZip}"
+    const val leakCanary="com.squareup.leakcanary:leakcanary-android:${Versions.leakCanary}"
+
 }
